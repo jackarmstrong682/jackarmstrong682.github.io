@@ -1,0 +1,416 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<div class="resume-wrapper">
+	<section class="profile section-padding">
+		<div class="container">
+			<div class="picture-resume-wrapper">
+        <div class="picture-resume">
+        <svg version="1.1" viewBox="0 0 350 350">
+  
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Varela+Round);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700);
+
+    $profileBg:#fff;
+    $skillsBg:#3d3e42;
+    $profileColor:#9099a0;
+    $skillsColor:#9099a0; 
+    $linkColor:#66cc99;
+    $boldColor:#4a4e51;
+    $time:0.6s;
+
+     
+    @mixin breakpoint($point) {
+      @if $point == papa-bear {
+        @media (max-width: 1500px)  { @content; }
+      }
+      @if $point == mama-bear {
+        @media (max-width: 1200px)  { @content; }
+      }
+      @if $point == brother-bear {
+        @media (max-width: 850px)  { @content; }
+      }
+      @else if $point == baby-bear {
+        @media (max-width: 450px)  { @content; }
+      }
+    }
+
+    *, *::after, *::before {
+      box-sizing:border-box;
+    }
+
+    html,body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size:16px;
+      line-height:1.5em;
+    }
+    a{color:$linkColor; text-decoration:none;}
+    .clearfix::after, .clearfix::before {
+      content: " ";
+      display: table;
+    }
+    .clearfix::after{clear:both;}
+    .bold {color:$boldColor; font-weight:400;}
+
+    .resume-wrapper {
+      position:relative;
+      text-align:center;
+      height:100%;
+    }
+
+    .container {
+      min-height:600px;
+    } 
+
+    .profile {
+      background:$profileBg;
+      width:40%;
+      float:left;
+      color:$profileColor;
+      @include breakpoint(brother-bear) { width: 100%; }
+      .name-wrapper {
+        float:left;
+        width:60%;
+      }
+      h1 {
+        font-size:2.5em;
+        text-align:left;
+        font-family: 'Varela Round', sans-serif;
+        color:$boldColor;
+        text-transform:uppercase;
+        line-height:1em;
+        padding-top:40px; 
+        @include breakpoint(mama-bear) {
+           padding-top:20px;
+        }
+        @include breakpoint(baby-bear) {
+          font-size:1.8em;  
+          padding-top:20px;
+        } 
+      }
+      li {
+          margin-bottom:10px;
+        }
+      .picture-resume-wrapper {
+        width:40%;
+        display:block;
+        float:left;
+        @include breakpoint(mama-bear) {
+           width:100%;
+        }
+      }
+      .picture-resume {
+        background-size:cover;
+        border-radius:50%;
+        margin-right:0px;
+        display:table;
+        position:relative;
+        vertical-align:middle;
+        span {
+            display:table-cell;
+            vertical-align: middle;
+            position:relative;
+            margin:0 auto;
+            z-index:10;
+           text-align:center
+        }
+        img {
+          border-radius:50%;
+          width:130px;
+          @include breakpoint(papa-bear) {
+            width:80px;
+          }
+          @include breakpoint(mama-bear) {
+            width:120px;
+            height:120px;
+          }
+        }
+        @include breakpoint(papa-bear) {
+          width:150px;
+          height:150px;
+        }
+        @include breakpoint(mama-bear) {
+          width:200px;
+          height:200px;
+        }
+         @include breakpoint(baby-bear) { width:180px;height:180px; } 
+      }
+      .contact-info{
+        font-weight:300;
+        @include breakpoint(mama-bear) {margin-top:70px; } 
+        @include breakpoint(baby-bear) { margin-top:50px; } 
+      }
+      .list-titles {
+        float:left;
+        text-align:left;
+        font-weight:600;
+        width:40%;
+        color:$boldColor;
+      }
+      .list-content{
+        float:left;
+        width:60%;
+        text-align:left;
+        font-weight:300;
+      }
+      .contact-presentation {
+        text-align:left;
+        font-weight:300;
+        @include breakpoint(mama-bear) {margin-top:70px;margin-bottom:70px; } 
+        @include breakpoint(brother-bear) {margin-top:50px;margin-bottom:50px; } 
+        
+      }
+      svg {
+        width:100%;
+        position:absolute;
+        top:0;
+        left:0;
+        //display:none;
+      }
+
+      .st0, .st1 {
+        fill:#66cc99;
+      }
+
+    }
+    .experience {
+      background:#3d3e42;
+      width:60%;
+      float:left;
+      position:relative;
+      color:#9099a0;
+      font-weight:300;
+      min-height:100%;
+      min-height:100vh;
+      @include breakpoint(brother-bear) { width: 100%; } 
+      h3.experience-title {
+        color:#66cc99;
+        text-align:left;
+        text-transform:uppercase;
+        font-size:1.2em;
+        margin-bottom:20px;
+        font-weight:400;
+      }
+      .company-wrapper {
+        width:30%;
+        float:left;
+        text-align:left;
+        padding-right:5%;
+        margin-bottom:60px;
+        @include breakpoint(baby-bear) {width:100%; margin-bottom:20px;} 
+      }
+      .job-wrapper {
+        width:70%;
+        float:left;
+        text-align:left;
+        padding-right:5%;
+        @include breakpoint(baby-bear) {width:100%;margin-bottom:40px;} 
+      }
+      .experience-title {
+          color:white;
+          margin-bottom:15px;;
+        }
+    }
+
+    .section-padding {
+     padding:60px 60px 40px 40px;
+     @include breakpoint(brother-bear) { padding:80px 15% 40px 10%; }
+     @include breakpoint(baby-bear) { padding:40px 10% 20px 5%; }
+    }
+
+    .section-wrapper {
+      width:50%;
+      float:left;
+      text-align:left;
+      color:$skillsColor;
+      font-weight:300;
+      margin-bottom:20px;
+      @include breakpoint(baby-bear) {width:100%;}
+      &:nth-child(3){ 
+        padding-right:8%;
+      }
+      h3.section-title {
+        color: #66cc99;
+        text-align:left;
+        text-transform:uppercase;
+        font-size:1.2em;
+        margin-bottom:20px;
+        font-weight:400;
+      }
+      .skill-percentage {
+        margin-bottom:10px;
+        position:relative;
+        &::after {
+          content:"";
+          width:100%;
+          height:6px;
+          background:$boldColor;
+          display:block;
+          margin-top:3px;
+        }
+        &::before{
+          content:"";
+          height:6px;
+          background:#66cc99;
+          position:absolute;
+          margin-top:3px;
+          bottom:0;
+        }
+        &:nth-child(1)::before {width:80%;animation: skill_1 $time ease;}
+        &:nth-child(2)::before {width:90%; animation: skill_2 $time ease;} 
+        &:nth-child(3)::before {width:50%;animation: skill_3 $time ease;}
+        &:nth-child(4)::before {width:60%;animation: skill_4 $time ease;}
+        &:nth-child(5)::before {width:70%;animation: skill_5 $time ease;}
+        &:nth-child(6)::before {width:70%;animation: skill_6 $time ease;}
+        &:nth-child(7)::before {width:70%;animation: skill_6 $time ease;}
+      }
+      
+    }
+
+    @keyframes skill_1 {from {width:0%;}to {width:80%;}}
+    @keyframes skill_2 {from {width:0%;}to {width:90%;}}
+    @keyframes skill_3 {from {width:0%;}to {width:50%;}}
+    @keyframes skill_4 {from {width:0%;}to {width:60%;}}
+    @keyframes skill_5 {from {width:0%;}to {width:70%;}}  
+    @keyframes skill_6 {from {width:0%;}to {width:70%;}}
+    @keyframes skill_7 {from {width:0%;}to {width:70%;}}
+  </style>
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9" result="cm" />
+    </filter>
+  </defs>
+</svg>
+      </div>
+         <div class="clearfix"></div>
+ </div>
+      <div class="name-wrapper">
+        <h1>Jack <br/>Armstrong</h1>
+      </div>
+      <div class="clearfix"></div>
+      <div class="contact-info clearfix">
+      	<ul class="list-titles">
+      		<li>Cell</li>
+      		<li>Mail</li>
+      		<li>Location</li>
+      	</ul>
+        <ul class="list-content">
+        	<li>+1 (587) 415-1099</li>
+        	<li>jacksonarmstrong682@gmail.com</li>
+        	<li>Saskatoon, SK</li>
+        </ul>
+      </div>
+      <div class="contact-presentation">
+      	<p><span class="bold">A highly motivated and customer-focused individual with tenured experience in delivering outstanding service and building long-term customer relationships. My strong communication abilities, combined with a diverse background in finance, enable me to adapt seamlessly across different professional settings.<br><br>I consistently provide high-quality service, ensuring customer satisfaction while fostering loyalty. Whether managing inquiries, resolving issues, or offering tailored solutions, I thrive in dynamic environments where I can make a tangible impact on both customer experience and business outcomes.</p>
+      </div>
+		</div>
+	</section>
+  
+  <section class="experience section-padding">
+  	<div class="container">
+  		<h3 class="experience-title">Experience</h3>
+      
+      <div class="experience-wrapper">
+      	<div class="company-wrapper clearfix">
+      		<div class="experience-title" style="font-weight: bold;">CIBC</div>
+          <div class="time">February 2023 - Present</div>
+      	</div>
+        
+        <div class="job-wrapper clearfix">
+        	<div class="experience-title">Financial Service Representative </div>
+          <div class="company-description">
+          	<p>
+              <ul>
+                <li style="padding: 10px;">Participated in account management by monitoring client accounts for potential issues and notifying them accordingly.</li>
+                <li style="padding: 10px;">Provided personalized guidance to customers based on their goals, needs, and financial situation.</li>
+                <li style="padding: 10px;">Managed routine transactions and obtained experience with ICS Financial Systems software.</li>
+                <li style="padding: 10px;">Promoted and cross-sold financial products and services that align with client expectations, providing several options.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+        
+        <div class="company-wrapper clearfix">
+      		<div class="experience-title" style="font-weight: bold;">Agilus Work Solutions</div>
+          <div class="time">January 2018 - September 2022</div>
+      	</div>
+        
+         <div class="job-wrapper clearfix">
+        	<div class="experience-title">Customer Support Advisor</div>
+          <div class="company-description">
+            <p>
+              <ul>
+                <li style="padding: 10px;">Held a variety of positions from customer support to a Sales role that required addressing client needs and supporting customers with various services and products.</li>
+                <li style="padding: 10px;">Utilized Salesforce for documenting customer information and keeping track of trends and data.</li>
+                <li style="padding: 10px;">Delivered exceptional customer service by handling numerous inquiries daily and resolving issues efficiently and professionally.</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-wrapper clearfix">
+        <h3 class="experience-title">Skills</h3>
+          <ul>
+            <li class="skill-percentage" style="padding: 10px;">Microsoft Office Suite Tools</li>
+            <li class="skill-percentage" style="padding: 10px;">Problem-Solving and Critical Thinking</li>
+            <li class="skill-percentage" style="padding: 10px;">CRM Software (Salesforce)</li>
+            <li class="skill-percentage" style="padding: 10px;">Digital Banking Tools</li>
+          </ul>
+      </div>
+          
+      <div class="job-wrapper clearfix">
+        <h3 class="experience-title">Hobbies</h3>
+          <ul>
+            <li style="padding: 10px;">Photography</li>
+            <li style="padding: 10px;">Web Design</li>
+            <li style="padding: 10px;">Hiking</li>
+            <li style="padding: 10px;">Swimming</li>
+          </ul>
+      </div>
+      
+  	</div>
+  </section>
+  
+  <script>
+    // Some code thanks to @chrisgannon
+
+  var select = function(s) {
+    return document.querySelector(s);
+  }
+
+  function randomBetween(min,max)
+  {
+      var number = Math.floor(Math.random()*(max-min+1)+min);
+    
+      if ( number !== 0 ){
+        return number;
+      }else {
+        return 0.5;
+      }
+  }
+
+  var tl = new TimelineMax();
+
+  for(var i = 0; i < 20; i++){
+
+    var t = TweenMax.to(select('.bubble' + i), randomBetween(1, 1.5), {
+      x: randomBetween(12, 15) * (randomBetween(-1, 1)),
+      y: randomBetween(12, 15) * (randomBetween(-1, 1)), 
+      repeat:-1,
+      repeatDelay:randomBetween(0.2, 0.5),
+      yoyo:true,
+      ease:Elastic.easeOut.config(1, 0.5)
+    })
+
+    tl.add(t, (i+1)/0.6)
+  }
+
+  tl.seek(50);
+  </script>
+  <div class="clearfix"></div>
+</div>
